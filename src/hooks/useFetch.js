@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-
+/**
+ * !Not being used, might remove
+ */
 export function useFetch(uri) {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
