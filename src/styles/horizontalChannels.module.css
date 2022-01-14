@@ -1,0 +1,23 @@
+.scrollContainer {
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 20px;
+}
+.channelWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.channelName {
+  text-align: center;
+  color: #d3d3d3;
+  margin-top: 8px;
+  width: 140px;
+}
+.channelImage {
+  width: 125px;
+  height: 125px;
+  border-radius: 16px;
+}

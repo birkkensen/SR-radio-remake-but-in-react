@@ -1,0 +1,19 @@
+.categoryWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.categoryName {
+  color: #d3d3d3;
+}
+.categoryExpand {
+  font-weight: bold;
+  color: #d88c00;
+  background: none;
+  border: none;
+}
+.categoryExpand:active {
+  color: #664200;
+}

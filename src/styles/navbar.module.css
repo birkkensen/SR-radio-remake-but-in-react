@@ -1,0 +1,18 @@
+.navbar {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: lighter;
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}

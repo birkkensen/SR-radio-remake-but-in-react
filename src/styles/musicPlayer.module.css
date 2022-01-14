@@ -1,0 +1,13 @@
+.musicButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.musicButton:hover {
+  transform: scale(1.1);
+}
+.musicButtonImage {
+  width: 50px;
+  margin: 16px;
+}

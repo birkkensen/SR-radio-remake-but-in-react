@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { HomePage, ChannelPage } from "./pages";
+import { Routes, Route } from "react-router-dom";
+import { fetchAllChannels } from "./api";
+import { useEffect, useState } from "react";
+import "./index.css";
 
+/**
+ * TODO: Add a route to all the wrong paths
+ * TODO: Cleanup the components folder
+ */
 function App() {
+  const [channels, setChannels] = useState([]);
+  useEffect(() => {
+    fetchAllChannels().then((data) => setChannels(data));
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage channels={channels} />} />
+        <Route path="/channel/:id" element={<ChannelPage />} />
+      </Routes>
+    </>
   );
 }
 
