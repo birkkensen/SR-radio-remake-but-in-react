@@ -1,3 +1,7 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
 .musicButton {
   border: none;
   background-color: transparent;
@@ -8,6 +12,7 @@
   transform: scale(1.1);
 }
 .musicButtonImage {
-  width: 50px;
+  font-size: 70px;
   margin: 16px;
+  color: #fff;
 }

@@ -1,4 +1,4 @@
-import { HomePage, ChannelPage } from "./pages";
+import { HomePage, ChannelPage, NotFound } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import { fetchAllChannels } from "./api";
 import { useEffect, useState } from "react";
@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage channels={channels} />} />
         <Route path="/channel/:id" element={<ChannelPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

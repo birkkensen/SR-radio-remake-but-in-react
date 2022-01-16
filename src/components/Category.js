@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/category.module.css";
 function Category({ name }) {
   return (

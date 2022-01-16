@@ -1,0 +1,26 @@
+.progress {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 0px auto 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  height: 5px;
+  width: 80vw;
+}
+
+.progressValue {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 5px;
+  width: 0;
+}
+.progressBall {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translateX(-7.5px);
+}

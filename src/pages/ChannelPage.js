@@ -1,38 +1,46 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Navbar, BackBtn, MusicPlayer } from "../components";
-const defaultApiUrl = "http://api.sr.se/api/v2";
+import { useInterval } from "../hooks/useInterval";
+import { Navbar, BackBtn, MusicPlayer, UpcomingProgram, Category } from "../components";
+import { fetchChannel } from "../api";
 
-/**
- * TODO: Come up with a way to re-fetch every (10?) seconds
- * TODO: Error handle if the show doesn't have a scedule?? Do they all have one
- */
 function ChannelPage() {
   const { id } = useParams();
-  const [channel, setChannel] = useState({ audio: null, schedule: null, song: null });
+  const [channel, setChannel] = useState({ channelInfo: null, schedule: null, song: null });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchChannel() {
-      const [audio, schedule, song] = await Promise.all([
-        axios(`${defaultApiUrl}/channels/${id}?format=json`),
-        axios(`${defaultApiUrl}/scheduledepisodes?channelid=${id}&format=json&pagination=false`),
-        axios(`${defaultApiUrl}/playlists/rightnow?channelid=${id}&format=json`),
-      ]);
-      setChannel({ audio, schedule, song });
+    fetchChannel(id).then((res) => {
+      const [channelInfo, schedule, song] = res;
+      setChannel({ channelInfo, schedule, song });
       setLoading(false);
-    }
-    fetchChannel();
+    });
   }, [id]);
 
+  useInterval(() => {
+    fetchChannel(id).then((res) => {
+      const [channelInfo, schedule, song] = res;
+      setChannel({ channelInfo, schedule, song });
+    });
+  }, [10000]);
+
+  if (loading) return <h1 style={loadingStyle}>Loading...</h1>;
   return (
     <>
       <Navbar />
       <BackBtn />
-      {loading ? <h1>Loading...</h1> : <MusicPlayer channel={channel} />}
+      <MusicPlayer channel={channel} />
+      <Category name={`${channel.channelInfo.data.channel.name} today`} />
+      <UpcomingProgram channel={channel} />
     </>
   );
 }
 
 export default ChannelPage;
+
+const loadingStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#fff",
+};

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import backArrow from "../images/backMain.svg";
+import { BiArrowBack } from "react-icons/bi";
 import styles from "../styles/backBtn.module.css";
 function BackBtn() {
   return (
     <Link to="/" className={styles.container}>
-      <img className={styles.image} src={backArrow} alt="Go backa arrow" />
+      <BiArrowBack className={styles.backArrow} alt="Go back" />
       <h3 className={styles.text}>Back</h3>
     </Link>
   );

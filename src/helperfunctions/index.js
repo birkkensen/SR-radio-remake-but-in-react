@@ -21,7 +21,7 @@ export function checkAnimation(string) {
     return false;
   }
 }
-
+let upComingIndex = 0;
 export function returnCurrentProgram(schedule) {
   const currentTime = new Date().getTime();
   for (let i = 0; i < schedule.length; i++) {
@@ -30,7 +30,11 @@ export function returnCurrentProgram(schedule) {
       removeDateStuff(program.starttimeutc) < currentTime &&
       removeDateStuff(program.endtimeutc) > currentTime
     ) {
+      upComingIndex = i + 1;
       return program;
     }
   }
+}
+export function returnUpcomingProgram(schedule) {
+  return schedule[upComingIndex];
 }

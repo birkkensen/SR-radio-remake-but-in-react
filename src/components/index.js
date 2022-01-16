@@ -1,10 +1,19 @@
-// Import all components here and export them.
 import Navbar from "./Navbar";
 import SearchForm from "./SearchForm";
 import HorizontalChannels from "./HorizontalChannels";
 import VerticalChannels from "./VerticalChannels";
 import Category from "./Category";
 import BackBtn from "./BackBtn";
-import MusicPlayer from "./MusicPlayer";
+import MusicPlayer from "./musicplayer/MusicPlayer";
+import UpcomingProgram from "./UpcomingProgram";
 
-export { Navbar, SearchForm, HorizontalChannels, VerticalChannels, Category, BackBtn, MusicPlayer };
+export {
+  Navbar,
+  SearchForm,
+  HorizontalChannels,
+  VerticalChannels,
+  Category,
+  BackBtn,
+  MusicPlayer,
+  UpcomingProgram,
+};
