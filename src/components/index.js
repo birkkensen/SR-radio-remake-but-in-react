@@ -4,7 +4,7 @@ import HorizontalChannels from "./HorizontalChannels";
 import VerticalChannels from "./VerticalChannels";
 import Category from "./Category";
 import BackBtn from "./BackBtn";
-import MusicPlayer from "./musicplayer/MusicPlayer";
+import MusicPlayer from "./Musicplayer/MusicPlayer";
 import UpcomingProgram from "./UpcomingProgram";
 
 export {

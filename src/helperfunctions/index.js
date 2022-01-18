@@ -2,7 +2,7 @@
  * TODO: Better naming on functions
  */
 
-export function removeDateStuff(string) {
+export function cleanDateString(string) {
   return JSON.parse(string.replace(/[^0-9.]+/g, ""));
 }
 
@@ -14,7 +14,6 @@ export function msToLocalTime(ms) {
 }
 
 export function checkAnimation(string) {
-  console.log(string);
   if (string.length > 40) {
     return true;
   } else {
@@ -27,8 +26,8 @@ export function returnCurrentProgram(schedule) {
   for (let i = 0; i < schedule.length; i++) {
     const program = schedule[i];
     if (
-      removeDateStuff(program.starttimeutc) < currentTime &&
-      removeDateStuff(program.endtimeutc) > currentTime
+      cleanDateString(program.starttimeutc) < currentTime &&
+      cleanDateString(program.endtimeutc) > currentTime
     ) {
       upComingIndex = i + 1;
       return program;

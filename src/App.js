@@ -4,10 +4,6 @@ import { fetchAllChannels } from "./api";
 import { useEffect, useState } from "react";
 import "./index.css";
 
-/**
- * TODO: Add a route to all the wrong paths
- * TODO: Cleanup the components folder
- */
 function App() {
   const [channels, setChannels] = useState([]);
   useEffect(() => {

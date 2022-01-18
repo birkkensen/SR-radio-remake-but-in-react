@@ -2,17 +2,18 @@
   display: flex;
   justify-content: center;
 }
-.musicButton {
+.playerButton {
   border: none;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.musicButton:hover {
+.playerButton:focus,
+.playerButton:active {
   transform: scale(1.1);
 }
-.musicButtonImage {
-  font-size: 70px;
+.playerButtonImage {
+  font-size: 60px;
   margin: 16px;
   color: #fff;
 }

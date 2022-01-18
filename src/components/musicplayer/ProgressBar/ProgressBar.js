@@ -1,11 +1,11 @@
-import { removeDateStuff } from "../../helperfunctions";
+import { cleanDateString } from "../../../helperfunctions";
 import { useState, useEffect } from "react";
-import styles from "../../styles/progressBar.module.css";
+import s from "./progressBar.module.css";
 
 function ProgressBar({ currentProgram }) {
   const [progress, setProgress] = useState(0);
-  const startTime = removeDateStuff(currentProgram.starttimeutc);
-  const endTime = removeDateStuff(currentProgram.endtimeutc);
+  const startTime = cleanDateString(currentProgram.starttimeutc);
+  const endTime = cleanDateString(currentProgram.endtimeutc);
   useEffect(() => {
     const interval = setInterval(() => {
       const currentTime = new Date().getTime();
@@ -15,9 +15,9 @@ function ProgressBar({ currentProgram }) {
     return () => clearInterval(interval);
   });
   return (
-    <div className={styles.progress}>
-      <div className={styles.progressValue} style={{ width: `${progress}%` }}></div>
-      <div className={styles.progressBall}></div>
+    <div className={s.progress}>
+      <div className={s.progressValue} style={{ width: `${progress}%` }}></div>
+      <div className={s.progressBall}></div>
     </div>
   );
 }

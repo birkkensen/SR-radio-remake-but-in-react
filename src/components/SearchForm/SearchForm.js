@@ -1,10 +1,10 @@
-import styles from "../styles/searchForm.module.css";
-import searchIcon from "../images/search.svg";
+import styles from "./searchForm.module.css";
+import { BsSearch } from "react-icons/bs";
 
 function SearchForm() {
   return (
     <form className={styles.search}>
-      <img className={styles.searchIcon} src={searchIcon} alt="Magnifying glass" />
+      <BsSearch className={styles.searchIcon} />
       <input className={styles.searchInput} type="search" placeholder="Search for programs" />
     </form>
   );

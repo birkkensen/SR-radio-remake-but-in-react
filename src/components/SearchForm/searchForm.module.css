@@ -7,8 +7,8 @@
   border-radius: 8px;
 }
 .searchIcon {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
+  color: #fff;
   margin-right: 10px;
 }
 .searchInput {

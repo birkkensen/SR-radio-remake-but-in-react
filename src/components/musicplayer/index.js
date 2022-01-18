@@ -1,6 +1,6 @@
 import Audio from "./Audio";
 import ProgressBar from "./ProgressBar";
-import MusicPlayerControls from "./MusicPlayerControls";
-import MusicPlayerInfo from "./MusicPlayerInfo";
+import PlayerInfo from "./PlayerInfo";
+import PlayerControls from "./PlayerControls";
 
-export { Audio, ProgressBar, MusicPlayerControls, MusicPlayerInfo };
+export { Audio, ProgressBar, PlayerInfo, PlayerControls };

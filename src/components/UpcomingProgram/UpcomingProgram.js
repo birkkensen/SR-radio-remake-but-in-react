@@ -1,10 +1,10 @@
-import s from "../styles/upcomingProgram.module.css";
-import { returnUpcomingProgram, msToLocalTime, removeDateStuff } from "../helperfunctions";
+import s from "./upcomingProgram.module.css";
+import { returnUpcomingProgram, msToLocalTime, cleanDateString } from "../../helperfunctions";
 function UpcomingProgram({ channel }) {
   const { channelInfo, schedule } = channel;
   const channelImage = channelInfo.data.channel.image;
   const currentProgram = returnUpcomingProgram(schedule.data.schedule);
-  const startTime = msToLocalTime(removeDateStuff(currentProgram.starttimeutc));
+  const startTime = msToLocalTime(cleanDateString(currentProgram.starttimeutc));
   return (
     <div className={s.upcoming}>
       <img

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../styles/verticalChannels.module.css";
+import styles from "./verticalChannels.module.css";
 
 function VerticalChannels({ channels }) {
   return (

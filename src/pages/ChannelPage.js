@@ -23,7 +23,6 @@ function ChannelPage() {
       setChannel({ channelInfo, schedule, song });
     });
   }, [10000]);
-
   if (loading) return <h1 style={loadingStyle}>Loading...</h1>;
   return (
     <>

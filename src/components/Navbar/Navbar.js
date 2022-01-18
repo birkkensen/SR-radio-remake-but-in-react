@@ -1,5 +1,5 @@
 import { CgProfile } from "react-icons/cg";
-import styles from "../styles/navbar.module.css";
+import styles from "./navbar.module.css";
 function Navbar() {
   return (
     <nav className={styles.navbar}>
