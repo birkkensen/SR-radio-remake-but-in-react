@@ -7,6 +7,7 @@ function Audio({ audio, isPlaying }) {
   return (
     <>
       {audio && (
+        // eslint-disable-next-line jsx-a11y/media-has-caption
         <audio ref={audioElement}>
           <source src={audio.src} type="audio/mpeg" />
           Your browser does not support the audio tag.

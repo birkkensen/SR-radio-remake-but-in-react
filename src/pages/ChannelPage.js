@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useInterval } from "../hooks/useInterval";
-import { Navbar, BackBtn, MusicPlayer, UpcomingProgram, Category } from "../components";
+import { Navbar, BackBtn, MusicPlayer, UpcomingProgram } from "../components";
 import { fetchChannel } from "../api";
 
 function ChannelPage() {
@@ -29,7 +29,6 @@ function ChannelPage() {
       <Navbar />
       <BackBtn />
       <MusicPlayer channel={channel} />
-      <Category name={`${channel.channelInfo.data.channel.name} today`} />
       <UpcomingProgram channel={channel} />
     </>
   );

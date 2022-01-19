@@ -1,21 +1,26 @@
 import s from "./upcomingProgram.module.css";
 import { returnUpcomingProgram, msToLocalTime, cleanDateString } from "../../helperfunctions";
+import { Category } from "../";
 function UpcomingProgram({ channel }) {
   const { channelInfo, schedule } = channel;
-  const channelImage = channelInfo.data.channel.image;
-  const currentProgram = returnUpcomingProgram(schedule.data.schedule);
-  const startTime = msToLocalTime(cleanDateString(currentProgram.starttimeutc));
+  const defaultImage = channelInfo.data.channel.image;
+  const upcomingProgram = returnUpcomingProgram(schedule.data.schedule);
+  if (upcomingProgram === undefined) return <></>;
+  const startTime = msToLocalTime(cleanDateString(upcomingProgram.starttimeutc));
   return (
-    <div className={s.upcoming}>
-      <img
-        className={s.upcomingImage}
-        src={currentProgram.imageurl ? currentProgram.imageurl : channelImage}
-        alt={currentProgram.title}
-      />
-      <h4 className={s.upcomingText}>
-        {currentProgram.title} {currentProgram.subtitle} ({startTime})
-      </h4>
-    </div>
+    <>
+      <Category name={`${channel.channelInfo.data.channel.name} today`} />
+      <div className={s.upcoming}>
+        <img
+          className={s.upcomingImage}
+          src={upcomingProgram.imageurl ? upcomingProgram.imageurl : defaultImage}
+          alt={upcomingProgram.title}
+        />
+        <h4 className={s.upcomingText}>
+          {upcomingProgram.title} {upcomingProgram.subtitle} ({startTime})
+        </h4>
+      </div>
+    </>
   );
 }
 

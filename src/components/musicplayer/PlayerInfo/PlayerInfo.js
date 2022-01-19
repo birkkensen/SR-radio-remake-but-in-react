@@ -23,10 +23,12 @@ export default PlayerInfo;
 
 function ChannelImage() {
   const { channelInfo, currentProgram } = useContext(ChannelContext);
+  const defaultImage = channelInfo.data.channel.image;
+  const currentProgramImage = currentProgram.imageurl;
   return (
     <img
       className={s.channelImage}
-      src={currentProgram.imageurl ? currentProgram.imageurl : channelInfo.data.channel.image}
+      src={currentProgramImage ? currentProgramImage : defaultImage}
       alt={currentProgram.title}
     />
   );
