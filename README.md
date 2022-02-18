@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# SR Remake in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Hyper Island - First Webb App
 
-In the project directory, you can run:
+### :open_file_folder: The Brief:
 
-### `npm start`
+We started the module of by creating a website using the Sveriges Radio API in vanilla Javascript etc. In this project I had to recreate the that project into React 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### :hourglass_flowing_sand: Time spent / Deadline:
 
-### `npm test`
+6 weeks (3 weeks for the React part)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :dart: Goals:
 
-### `npm run build`
+Since this was my first React project I just wanted to get comfortable with the basics.
+- Understand how regular JS/HTML/CSS translates into React
+- Get comfortable with React basics, read the documentation.
+- Learn how to use hooks and props.
+- Write readable and maintainable code.
+- Create an easy to navigate file / folder structure.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### :grimacing: The process:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It took me some time to get used to breaking everything up into smaller components. Passing props up and down the hierarchy I also found a bit tricky in the beginning. I had to spend a lot of my time reading the documentation and watching tutorials to get a hang of it all.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+My biggest struggle was (and still is) towards the end of the project trying to get the radio to play on IOS devices using Safari, which is a thing I haven't been able to fix yet. I at least got it working on Safari for desktops.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### :blue_book: Learnings:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Learned even more about Sveriges Radios API, and APIs in general
+- A foundation in React a can keep working on
+- More JS knowledge, as well as HTML and module based CSS
+- The mobile first approach
+- Hooks such as useEffect, useState etc
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### :computer: Tech used in this specific repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Github
+- Netlify for hosting
+- HTML
+- CSS
+- JavaScript
+- React
