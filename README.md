@@ -6,7 +6,7 @@ Hyper Island - First Webb App
 
 ### :open_file_folder: The Brief:
 
-We started the module of by creating a website using the Sveriges Radio API in vanilla Javascript etc. In this project I had to recreate the that project into React 
+We started the module of by creating a website using the Sveriges Radio API in vanilla Javascript etc. In this project I had to recreate the that project into React <a href="https://github.com/birkkensen/SR-radio-remake">Link to the first project</a>
 
 
 ### :hourglass_flowing_sand: Time spent / Deadline:
